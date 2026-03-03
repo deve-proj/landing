@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bungee&family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Jura:wght@300..700&display=swap');
+
+.main {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 40px 0;
+}
+
+.main::before,
+.main::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 200px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.main::before {
+    left: 0;
+    background: linear-gradient(to right, black, transparent);
+}
+
+.main::after {
+    right: 0;
+    background: linear-gradient(to left, black, transparent);
+}
+
+.list {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 50px;
+    width: fit-content;
+    animation: scroll 25s linear infinite;
+    
+    &:hover {
+        animation-play-state: paused;
+        cursor: pointer;
+    }
+}
+
+.list{
+    flex-shrink: 0;
+    width: 395px;
+
+    li{
+        
+        border-radius: 20px;
+
+        img {
+            width: 395px;
+            height: 395px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        p {
+            color: #86D38B;
+            text-align: center;
+            font-weight: bold;
+            font-size: 36px;
+            font-family: "Jura";
+            margin-top: 20px;
+        }
+
+        &:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 40px rgba(134, 211, 139, 0.3);
+        }
+
+    }
+
+    
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-395px * 7 - 50px * 6));
+    }
+}
