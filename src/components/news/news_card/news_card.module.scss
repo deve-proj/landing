@@ -1,0 +1,42 @@
+.main{
+
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    transition: transform 0.2s ease;
+    flex-direction: column;
+    background-color: red;
+    width: 293px;
+    height: 400px;
+
+    img{
+        position: absolute;
+        top: 0;
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
+        opacity: 0.5;
+    }
+
+    p{
+        position: absolute;
+    }
+
+    &:hover{
+        transform: scale(1.2);
+        cursor: pointer;
+    }
+
+    clip-path: polygon(
+        30px 0,                    // верхний левый (начало среза)
+        calc(100% - 30px) 0,       // верхний правый (до среза)
+        100% 30px,                  // правый верхний срез
+        100% calc(100% - 30px),     // правый нижний срез
+        calc(100% - 30px) 100%,     // нижний правый (до среза)
+        30px 100%,                  // нижний левый (до среза)
+        0 calc(100% - 30px),        // левый нижний срез
+        0 30px                       // левый верхний срез
+    );
+
+}

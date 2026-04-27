@@ -1,0 +1,1 @@
+export const NEWS_API_URL = 'http://localhost:8000'

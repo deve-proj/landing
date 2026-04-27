@@ -10,9 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@deve-proj/news-center-sdk": "^0.0.5",
+    "@lovchikovmark/pretty-voting": "^0.0.7",
     "@types/axios": "^0.9.36",
     "@types/jest": "^30.0.0",
     "axios": "^1.13.6",
+    "embla-carousel-react": "^8.6.0",
     "jest": "^30.2.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",

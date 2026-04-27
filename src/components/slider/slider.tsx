@@ -1,8 +1,8 @@
 import { useRef } from 'react';
 import styles from './slider.module.scss'
+import useEmblaCarousel from 'embla-carousel-react';
 
-function Slider()
-{
+function Slider() {
     const images = [
         {
             source: 'corporate_wars.png',
@@ -34,8 +34,8 @@ function Slider()
         }
     ];
 
-    // Дублируем массив для создания эффекта бесконечности
-    const infiniteImages = [...images]; // Три копии
+    // Дублируем массив 3 раза для бесконечности
+    const infiniteImages = [...images, ...images, ...images]; // Три копии
 
     return(
         <section className={styles.main}>

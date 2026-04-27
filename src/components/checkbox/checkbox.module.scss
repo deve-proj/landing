@@ -1,0 +1,21 @@
+.main{
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    border-color: #424547;
+    border-width: 1px;
+    border-style: solid;
+
+    img{
+        width: 20px;
+        height: 20px;
+    }
+
+    &{
+        cursor: pointer;
+    }
+}
+
+.onSelected{
+    border-color: rgb(151, 214, 135);
+}

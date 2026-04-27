@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="220" viewBox="0 0 800 220" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <!-- Глоу/неоновый эффект -->
+    <filter id="neonGlow" x="-200%" y="-200%" width="400%" height="400%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur1"/>
+      <feColorMatrix in="blur1" type="matrix"
+        values="0 0 0 0 0
+                0 0 0 0 0.8
+                0 0 0 0 0
+                0 0 0 0.6 0" result="greenGlow"/>
+      <feMerge>
+        <feMergeNode in="greenGlow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Грубая текстура / дырки -->
+    <filter id="grunge" x="-50%" y="-50%" width="200%" height="200%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="5" stitchTiles="no" result="noise"/>
+      <feColorMatrix in="noise" type="matrix"
+        values="10 0 0 0 -5
+                0 10 0 0 -5
+                0 0 10 0 -5
+                0 0 0 1 0" result="highContrastNoise"/>
+      <feGaussianBlur in="highContrastNoise" stdDeviation="1" result="softNoise"/>
+      <feComposite in="SourceGraphic" in2="softNoise" operator="out" result="grunged"/>
+      <feComposite in="grunged" in2="SourceGraphic" operator="over" result="final"/>
+      <feMerge>
+        <feMergeNode in="final"/>
+      </feMerge>
+    </filter>
+
+    <!-- Тонкая внутренняя подсветка -->
+    <linearGradient id="innerHighlight" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#d6ffd6" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#5dfc6a" stop-opacity="0.1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Центрируем надпись -->
+  <g transform="translate(400, 120)">
+    <text x="0" y="30" font-family="Impact, 'Arial Black', sans-serif" font-size="160" letter-spacing="-8" fill="#34ff4a" stroke="#0b7a0b" stroke-width="10" stroke-linejoin="round" opacity="0.75" filter="url(#neonGlow)" text-anchor="middle" dominant-baseline="middle">DEVE</text>
+
+    <!-- Основной слой с grunge-фильтром -->
+    <text x="0" y="30" font-family="Impact, 'Arial Black', sans-serif" font-size="160" letter-spacing="-8"
+          fill="#34ff4a" stroke="#083e06" stroke-width="6" stroke-linejoin="round" filter="url(#grunge)" text-anchor="middle" dominant-baseline="middle">DEVE</text>
+
+    <!-- Внутренняя подсветка -->
+    <text x="0" y="30" font-family="Impact, 'Arial Black', sans-serif" font-size="160" letter-spacing="-8"
+          fill="url(#innerHighlight)" fill-opacity="0.6" stroke="none" style="mix-blend-mode: screen;" text-anchor="middle" dominant-baseline="middle">DEVE</text>
+
+    <!-- Тонкие царапины/линии для стиля -->
+    <g fill="none" stroke="#0a6b0a" stroke-width="2" stroke-linecap="round" opacity="0.6">
+      <path d="M-330 -35 L-100 -35" />
+      <path d="M-200 -65 L50 -65" opacity="0.35"/>
+      <path d="M-100 -10 L100 -10" opacity="0.25"/>
+    </g>
+  </g>
+</svg>

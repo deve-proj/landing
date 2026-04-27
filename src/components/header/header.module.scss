@@ -2,17 +2,93 @@
 
     width: 100%;
     height: 100px;
-    background-color: red;
+    background-color: rgba(0, 0, 0, 0.5);
     display: flex;
+    align-items: center;
     justify-content: space-between;
     box-sizing: border-box;
     padding-left: 20px;
     padding-right: 20px;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    z-index: 200;
     
-    img{
+    .logo{
 
-        width: 120px;
-        height: 120px;
+        width: 100px;
+        height: 100px;
+
+    }
+
+    .icon{
+        width: 48px;
+        height: 48px;
+        transition: transform 0.2s ease;
+    }
+
+    .icon:hover{
+        transform: scale(1.2);
+        cursor: pointer;
+    }
+
+    div{
+        display: flex;
+        gap: 50px;
+    }
+
+    input{
+        width: 40%;
+        height: 40px;
+        border-radius: 10px;
+        border: none;
+
+        &:focus{
+            outline: none;
+        }
+    }
+
+    button{
+
+        width: 150px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        transition: transform 0.2s ease;
+
+        p{
+
+            font-size: 16px;
+
+        }
+
+        &.register-btn{
+
+            color: #97d687;
+            font-weight: bold;
+            border-color: #97d687;
+            background-color: transparent;
+
+        }
+
+        &.login-btn{
+
+            color: white;
+            font-weight: bold;
+            border-color: transparent;
+            background-color: #97d687;
+
+        }
+
+        &:hover{
+
+            cursor: pointer;
+            transform: scale(1.2);
+
+        }
 
     }
 

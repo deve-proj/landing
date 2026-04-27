@@ -1,0 +1,264 @@
+.content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    align-items: center;
+    gap: 20px;
+}
+
+.logoBlock{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .logo{
+        width: 190px;
+        height: 50px;
+    }
+
+    .entryText{
+        margin: 15px;
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+        color: #a49b9b;
+        font-size: 25px;
+    }
+}
+
+button {
+    background-color: transparent;
+    border-radius: 5px;
+    border-color: rgb(151, 214, 135);
+    border-width: 1px;
+    border-style: solid;
+    width: 80%;
+    height: 50px;
+    border-radius: 5px;
+    color: rgb(151, 214, 135);
+    font-weight: 500;
+    font-size: 20px;
+    transition: transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img{
+        width: 30px;
+        height: 30px;
+        animation: rotate 2s linear infinite;
+    }
+
+    @keyframes rotate {
+        from{
+            transform: rotate(0deg);
+        }
+        to{
+            transform: rotate(360deg);
+        }
+    }
+
+    &:hover{
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+}
+
+.alternatives{
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+
+    .alternativesTextBlock{
+        display: flex;
+        width: 80%;
+        justify-content: center;
+        align-items: center;
+
+        p{
+            color: #a49b9b;
+            font-size: 15px;
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    .alternativesList{
+        list-style: none;
+        display: flex;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        width: 40%;
+        justify-content: center;
+        margin-bottom: 40px;
+        gap: 20px;
+
+        li{
+            flex-shrink: 0;
+            margin: 0;
+            padding: 0;
+            height: 50px;
+            width: 50px;
+            border-radius: 5px;
+            border-width: 1px;
+            border-style: solid;
+            border-color: rgba(151, 214, 135, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s ease;
+
+            &:hover{
+                cursor: pointer;
+                transform: scale(1.1);
+            }
+
+            img{
+                width: 90%;
+                height: 90%;
+            }
+        }
+    }
+}
+
+hr{
+    width: 80%;
+    border: none;
+    height: 1px;
+    background-color: #a49b9b;
+}
+
+.logoBlock{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .logo{
+        width: 190px;
+        height: 50px;
+    }
+
+    .entryText{
+        margin: 15px;
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+        color: #a49b9b;
+        font-size: 25px;
+    }
+}
+
+.inputBlock{
+    width: 80%;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    position: relative;
+    
+    p{
+        margin: 0;
+        color: rgb(151, 214, 135);
+    }
+
+    .forgotPassword{
+        margin: 0;
+        color: rgb(151, 214, 135);
+        text-align: end;
+        
+        &:hover{
+            cursor: pointer;
+            text-decoration: underline;
+        }
+    }
+
+    .checkboxAndForgotBlock{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 15px;
+
+        .remember{
+            display: flex;
+            align-items: center;
+            gap: 5px;
+
+            p{
+                color: #a49b9b;
+                padding: 0;
+                margin: 0;
+                align-self: center;
+
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    input{
+        position: relative;
+        background-color: transparent;
+        width: 100%;
+        height: 40px;
+        border-radius: 5px;
+        color: white;
+        outline: none;
+        border-width: 1px;
+        border-style: solid;
+        border-color: rgb(191, 218, 184);
+        padding-left: 10px;
+
+        &:focus{
+            border-color: rgb(151, 214, 135);
+        }
+    }
+
+    .inputIcon{
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+
+        &:hover{
+            cursor: pointer;
+        }
+    }
+
+    .inputWrapper{
+        display: flex;
+        position: relative;
+    }
+}
+
+.noAccount{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    .registText{
+        color: rgb(151, 214, 135);
+
+        &:hover{
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+
+    p{
+        margin: 0;
+        padding: 0;
+        color: #a49b9b;
+    }
+}
